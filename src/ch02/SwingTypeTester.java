@@ -45,13 +45,13 @@ public class SwingTypeTester extends JFrame implements CharacterSource{
             public void actionPerformed(ActionEvent evt) {
                 producer = new RandomCharacterGenerator( );
                 displayCanvas.setCharacterSource(producer);
-                producer.start( );
+                producer.start();
                 startButton.setEnabled(false);
                 feedbackCanvas.setEnabled(true);
-                feedbackCanvas.requestFocus( );
+                feedbackCanvas.requestFocus();
             }
         });
-        quitButton.addActionListener(new ActionListener( ) {
+        quitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 quit( );
             }
@@ -70,10 +70,10 @@ public class SwingTypeTester extends JFrame implements CharacterSource{
     public void newCharacter(int c) {
         handler.fireNewCharacter(this, c);
     }
-    public void nextCharacter( ) {
+    public void nextCharacter() {
         throw new IllegalStateException("We don't produce on demand");
     }
     public static void main(String args[]) {
-        new SwingTypeTester( ).show( );
+        new SwingTypeTester().show();
     }
 }

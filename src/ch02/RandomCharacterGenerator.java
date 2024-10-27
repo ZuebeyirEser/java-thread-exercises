@@ -28,7 +28,7 @@ public class RandomCharacterGenerator extends Thread implements CharacterSource 
                 (int) chars[random.nextInt(chars.length)]);
     }
     public void run( ) {
-        for (; ; ) {
+        for (;;) {
             nextCharacter();
             try {
                 Thread.sleep(getPauseTime());
