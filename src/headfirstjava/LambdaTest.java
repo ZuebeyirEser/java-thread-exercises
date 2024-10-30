@@ -82,8 +82,9 @@ public class LambdaTest {
         System.out.println(distinctGenre);
 
         Optional<Song> year1922 = songs.stream()
-                .filter(song -> song.);
-
+                .filter(song -> song.getYear() > 2100)
+                .findFirst();
+        System.out.println(year1922);
 
 
     }
