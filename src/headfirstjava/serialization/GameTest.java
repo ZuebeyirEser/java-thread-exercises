@@ -9,6 +9,7 @@ public class GameTest implements Serializable {
         GameChar characterTwo = new GameChar(50, "Elf", weapons);
         GameChar characterThree = new GameChar(50, "Troll", weapons);
         // serialization
+
         try {
             FileOutputStream fileOutputStream = new FileOutputStream("MyGame.ser");
             ObjectOutputStream os = new ObjectOutputStream(fileOutputStream);
@@ -21,8 +22,9 @@ public class GameTest implements Serializable {
             e.printStackTrace();
         }
         // deserialization
+
         try {
-            ObjectInputStream is = new ObjectInputStream(new FileInputStream("MyGame.ser"));
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream("MyGameVersion1.ser"));
             GameChar characterRestore = (GameChar) is.readObject();
             GameChar characterTwoRestore = (GameChar) is.readObject();
             GameChar characterThreeRestore = (GameChar) is.readObject();
@@ -33,7 +35,5 @@ public class GameTest implements Serializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }

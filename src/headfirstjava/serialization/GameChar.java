@@ -3,6 +3,7 @@
     import java.io.Serializable;
 
     public class GameChar implements Serializable {
+        static final long serialVersionUID = 1L;
         private int power;
         private String type;
         Weapon[] weapons;
