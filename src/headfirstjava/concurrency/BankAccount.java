@@ -5,6 +5,7 @@ public class BankAccount {
     public int getBalance() {
         return balance;
     }
+    // alternatively we can add syncronized code
     public void spend(int amount) {
         balance = balance - amount;
         if (balance < 0) {
