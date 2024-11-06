@@ -9,4 +9,8 @@ public class BankAccount {
             System.out.println("Overdrawn!");
         }
     }
+
+    public int getBalance() {
+        return balance;
+    }
 }
