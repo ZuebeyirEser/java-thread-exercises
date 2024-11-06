@@ -16,7 +16,6 @@ public class RyanAndMonicaJob implements Runnable{
         goShopping(amountToSpend);
     }
     private void goShopping(int amount) {
-      synchronized (account) {
           if (account.getBalance() >= amount) {
               System.out.println(name + " is about to spend");
               account.spend(amount);
@@ -24,7 +23,7 @@ public class RyanAndMonicaJob implements Runnable{
           } else {
               System.out.println("Sorry, not enough for " + name);
           }
-      }
+
     }
 
 }
